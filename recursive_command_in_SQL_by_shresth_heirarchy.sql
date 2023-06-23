@@ -36,7 +36,7 @@ with recursive cte as
 select * from cte;
 
 ---this code above has error in it. Now we'll look it one by one by looking at every iteration. 
----Also remember the "recursive" word in query is used in postgresql and not mssql. 
+---Also remember the "recursive" word in a query is used in postgresql and not mssql. 
 ---You can write recursive commands without using recursive word here in the query. We'll change that at the end.
 
 
@@ -99,3 +99,4 @@ select * from cte
 order by emp_id;
 
 --congratulations. We did it. If you are reading this, Hire me xd. Waiting for your call, lol. jk. Eagerly waiting :)
+---BTW did you notice any spelling errors here? I noticed a lot :) And damn, no. of grammatical errors. The reason I'm not correcting them is -  just to make you call me asap xd.
