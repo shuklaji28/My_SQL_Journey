@@ -1,3 +1,5 @@
+-- Find some practice questions of intermediate SQL at the end. 
+
 select * from album
 --boring work. Why should I show you album name :) I'll keep it secret :)
 
@@ -95,5 +97,16 @@ select * from logdata
 --       INSERT INTO logdata(msg) VALUES (current_timestamp);
 --       RETURN NEW;
 --    END;
+
+--Q.1 : Query to delete duplicate emails from the table.
+DELETE FROM Person
+WHERE email IN (
+  SELECT email
+  FROM (
+    SELECT email, ROW_NUMBER() OVER (PARTITION BY email ORDER BY email) AS rn
+    FROM Person
+  ) AS subquery
+  WHERE rn > 1
+);
 
 
